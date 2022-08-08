@@ -1,0 +1,1000 @@
+/* ======================= Google font =======================*/
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Averia+Serif+Libre:wght@300;400;700&display=swap');
+
+
+
+/* ======================= Variables =======================*/
+:root{
+  --white: #fff;
+  --main-red: #00b386;
+  --main-blue: #003049;
+  --dark-black: #000;
+  --light-black: #1a1a1a;
+  --light-red: rgba(252, 233, 234, 0.7);
+  --lighter-red: rgba(252, 233, 234, 0.3);
+  --navbar-scroll: #cbbcb1;
+  
+  --backdrop-filter-blur: blur(25px);
+  --font-family: 'Averia Serif Libre', sans-serif;
+  /* --heading-font: 'Playfair Display', serif; */
+}
+
+/*======================= Global styles =======================*/
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+::before,
+::after{
+  box-sizing: border-box;
+} 
+html{
+  scroll-behavior: smooth;
+}
+body{
+  background-color: var(--white);
+}
+a{
+  text-decoration: none;
+  color: inherit;
+}
+
+ul{
+  list-style: none;
+}
+a, span, p, 
+h1,h2,h3,
+h4, h5,h6,
+button, input, 
+::placeholder
+{
+    font-family: var( --font-family);
+}
+p{
+  font-size: 20px;
+}
+.button__icon{
+  font-size: 0.9rem;
+  margin-left: 0.5rem;
+}
+
+
+/*======================= Header start =======================*/
+
+/* Scroll top start */
+.scrolltop{
+    position: fixed;
+    right: 1rem;
+    bottom: -20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: .3rem;
+    background: #ff9c07;
+    border-radius: .4rem;
+    z-index: 10;
+    transition: .4s;
+    visibility: hidden;
+}
+  
+.scrolltop:hover{
+    box-shadow: 0 0 20px 0px rgba(0,0,0,0.2);
+}
+  
+.scrolltop__icon{
+    font-size: 1.4rem;
+    color: #FBFEFD;
+}
+  
+/* Show scrolltop */
+.show-scroll{
+    visibility: visible;
+    bottom: 1.5rem;
+}
+
+/* Scroll top end */
+
+
+/* Navbar start */
+
+nav{
+  display: flex;
+  padding: 2% 6%;
+  justify-content: space-between;
+  align-items: center;
+  transition: 1s;
+  position: fixed;
+  width: 100%;
+  z-index: 100;
+}
+nav .logo img{
+  width: 4rem!important;
+}
+nav .logo{
+  z-index: 5!important;
+}
+nav.sticky{
+  background-color: var(--white);
+  box-shadow: 0 2px 4px rgba(0,0,0,.1);
+  padding: 1% 6%;
+ 
+}
+nav.sticky .nav-links ul{
+  margin-bottom: 0rem;
+}
+nav.sticky .nav-links ul > li a{
+  color: var(--dark-black);
+}
+nav.sticky .dropdown li a{
+  color: var(--dark-black)!important;
+}
+nav.sticky ul.dropdown-menu.show{
+  background: var(--white);
+}
+.nav-links{
+  flex: 1;
+  text-align: right;
+  z-index: 5!important;
+}
+.nav-links ul > li{
+  list-style: none;
+  display: inline-block;
+  padding: 8px 12px;
+  position: relative;
+}
+.nav-links ul > li a{
+  color: var(--white);
+  text-decoration: none;
+  font-size: 19px;
+}
+.dropdown li a{
+  color: var(--white)!important;
+  padding: 0px!important;
+  font-size: 19px;
+}
+ul.dropdown-menu.show{
+  padding: 0px!important;
+  background: var(--light-black);
+}
+.nav-links ul li a::after{
+  content: '';
+  width: 0%;
+  height: 2px;
+  background: var(--main-red);
+  display: block;
+  margin: auto;
+  transition: 0.5s;
+}
+.nav-links ul li a:hover::after{
+  width: 100%;
+  cursor: pointer;
+}
+
+nav .fas,
+nav .fab{
+  display: none;
+}
+
+
+@media(max-width: 1000px){
+  .nav-links ul > li{
+    display: block;
+  }
+  .nav-links{
+      position: fixed;
+      background: var(--light-black);
+      height: 100vh;
+      width: 200px;
+      top: 0;
+      right: -200px;
+      text-align: left;
+      padding-left: 20px;
+      z-index: 60!important;
+      transition: 1s;
+  }
+  nav .fas,
+  nav .fab{
+    display: block;
+    color: var(--white);
+    margin: 10px;
+    font-size: 22px;
+    cursor: pointer;
+  }
+  nav .fa-buromobelexperte{
+    z-index: 5;
+    font-size: 26px!important;
+    color: var(--main-red);
+  }
+  .nav-links ul{
+      padding: 30px;
+  }
+  nav.sticky .nav-links ul > li a{
+    color: var(--white);
+  }
+}
+
+
+@media screen and (max-width: 500px){
+  nav .logo{
+    width: 3rem!important;
+  }
+ 
+  
+}
+
+/* Navbar end */
+
+/* Bannner start */
+.banner{
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.banner video{
+  position: absolute;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+.banner .content{
+  position: relative;
+  z-index: 3;
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: center;
+}
+.banner .content h1{
+  margin: 0;
+  padding: 0;
+  font-size: 3em;
+  text-transform: uppercase;
+  color: var(--main-red);
+  font-weight: bolder;
+}
+.banner .content p{
+  padding-top: 35px;
+  font-size: 1.3em;
+  color: #fff;
+}
+.video-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,.5); 
+  z-index: 2;
+}
+/* Banner end */
+/*======================= Header end =======================*/
+
+
+/*======================= About start =======================*/
+
+.about h1,
+
+.courses h1,
+.restuarant h1,
+.about_banner h1,
+.restuarant-pg h1,
+.restuarant-booking h1,
+.prog-includes h1,
+.contact-pg h2
+{
+  color: var(--dark-black);
+  font-family: var(--font-family);
+  font-weight: 400;
+}
+.about_banner h1{
+  color: var(--white);
+}
+
+/* .about h1::after,
+.service h1::after,
+.courses h1::after,
+.restuarant h1::after,
+.about_banner h1::after,
+.restuarant-pg h1::after,
+.restuarant-booking h1::after,
+.prog-includes h1::after{
+  content: '';
+  background: var(--main-red);
+  height: 4px;
+  width: 85px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 5px;
+  display: block;
+  transform: translateY(6px);
+  border-radius: 20px; 
+
+} */
+
+
+
+.my-btn{
+  width: 150px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #fff;
+  cursor: pointer;
+  margin: 20px;
+  margin-left: 0px;
+  height: 45px;
+  text-align: left;
+  border: none;
+  border-radius: 50px;
+  background-color: var(--main-red);
+
+}
+i.dir-arrow{
+  padding-left: 0.3rem;
+  padding-top: 0.3rem;
+}
+.centered-btn{
+  display: flex;
+  justify-content: left;
+  align-items: left;
+}
+.about-img{
+  background-image: url("../img/1.jpg");
+  height: 500px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover; 
+}  
+
+@media screen and (max-width: 1000px){
+  .about .row > div{
+    width: 100%!important;
+    padding-top: 0rem!important;
+    text-align: center;
+  }
+  .centered-btn{
+    justify-content: center;
+ 
+  }
+  .about-img{
+    display: none;
+  }
+ 
+  
+}
+
+
+/*======================= About end =======================*/
+
+
+/*======================= Equipment start =======================*/
+.equipment{
+  background: var(--dark-black);
+}
+.equipment h1{
+  color: #fff;
+}
+/*======================= Equipment end =======================*/
+
+
+/*======================= testimonial start =======================*/
+
+.testimonials{
+    background: linear-gradient(rgba(0, 0, 0, 0.9),rgba(0, 0, 0, 0.9)), url(../img/1.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+.testimonials h1{
+    color: white;
+}
+.testi-slider > div{
+    margin: auto;
+}
+.testi-slider img{
+    width: 100px;
+    border-radius: 50%;
+}
+.testi-slider .text-center{
+    color: white;
+}
+.testi-slider p{
+    font-size: 20px;
+}
+
+/*======================= testimonial end =======================*/
+
+
+/*======================= footer section starts =======================*/
+footer{
+  color: #ccc;
+  background: linear-gradient(rgba(0, 0, 0, 0.82),rgba(0, 0, 0, 0.87));
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+
+
+}
+footer .logo{
+  width: 4rem!important;
+}
+
+footer p{
+  line-height: 2.3;
+  font-size: 17px!important;
+  text-align: left!important;
+}
+footer h4{
+  color: var(--white);
+}
+
+footer i{
+  color:  var(--main-red);
+  font-size: 20px;
+  transition: 0.3s ease;
+}
+footer i:hover{
+  color: #fff;
+}
+footer ul li{
+  list-style-type: none;
+}
+footer .inner{
+  padding-left: 50px;
+}
+.footer-links > li a{
+  color: #ccc!important;
+  font-style: normal;
+  font-size: 17px;
+  line-height: 2;
+}
+.footer-links > li a:hover{
+  color:  var(--main-red)!important;
+}
+
+.footer > div > div > div:nth-child(2) div{
+  padding-right: 30px;
+}
+.footer-bottom{
+  color: #999;
+  padding-top: 20px;
+  border-top: 1px solid rgb(90, 89, 89);
+  margin-top: 10px;
+}
+.footer-bottom > p{
+  text-align: center!important;
+}
+footer .dropdown-content a{
+  color: #000!important;
+}
+
+@media screen and (max-width: 767px){
+  footer .container{
+      margin: 0;
+  }
+  footer .col-xl-5,
+  footer .col-xl-3,
+  footer .col-xl-4{
+      width: 100%!important;
+  }
+}
+@media screen and (max-width: 575px){
+  footer .container{
+    width: 100%!important;
+  }
+  footer .inner{
+      padding-left: 20px;
+  }
+  footer .logo{
+    width: 3rem;
+  }
+  footer p{
+    line-height: 2;
+    font-size: 16px!important;
+  }
+  .footer-links li a{
+    font-size: 16px!important;
+  }
+
+}
+
+
+ol, ul{
+  padding-left: 0rem!important;
+}
+
+
+/*=======================  footer section ends =======================*/
+
+/*==== home page ends ====*/
+
+
+/*==== about page start ====*/
+.about_banner{
+  background: linear-gradient(rgba(0, 0, 0, 0.7),rgba(0, 0, 0, 0.7)), url(../img/banner2.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 40vh;
+}
+.n_header{
+  height: 0;
+}
+
+@media screen and (max-width: 991px){
+  .about .row{
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .n_about .about-text{
+  padding-top: 0px!important;
+}
+
+}
+@media screen and (max-width: 750px){
+  .about_banner{
+    height: 30vh;
+  }
+  .about_banner div{
+    padding-top: 0rem!important;
+  }
+}
+@media screen and (max-width: 450px){
+  .about_banner{
+    height: 25vh;
+  }
+  .about_banner h1{
+    padding-top: 1.5rem!important;
+  }
+}
+/*==== about page ends ====*/
+
+
+/*==== restaurant page starts ====*/
+.restuarant-pg .card{
+  border-radius: 20px!important;
+}
+.restuarant-pg .card-body .card-title{
+  color: var(--dark-black);
+  font-family: var(--font-family);
+  font-weight: 400;
+}
+.restuarant-pg img{
+  object-fit: cover;
+  height: 95%;
+  width: 100%;
+  border-top-left-radius: 20px!important;
+  border-top-right-radius: 20px!important;
+}
+@media screen and (max-width: 991px){
+ .restuarant-pg .card-body{
+   text-align: center;
+ }
+}
+@media screen and (max-width: 575px){
+  .about_banner{
+    height: 25vh;
+  }
+  .about_banner h1{
+    padding-top: 1.5rem!important;
+  }
+  .restuarant-pg .row{
+    margin-left: 1rem;
+    margin-right: 1rem;
+
+  }
+  .restuarant-pg .row .card{
+    margin-bottom: 2rem;
+  }
+}
+
+/* .restuarant-pg .row{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.restuarant-pg .row > div{
+  background: linear-gradient(rgba(0, 0, 0, 0.7),rgba(0, 0, 0, 0.7)), url(../img/31.webp);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 420px;
+  width: 350px;
+  border-radius: 20px;
+  border-top-right-radius: 0px;
+}
+
+.restuarant-pg .row > div h2{
+  font-size: 35px;
+  color: var(--white);
+}
+@media screen and (max-width: 767px){
+  .restuarant-pg .row > div{
+    margin-left: 0rem!important;
+  }
+}
+
+@media screen and (max-width: 750px){
+  .restuarant-pg{
+    padding-top: 0rem!important;
+    margin-top: 0rem!important;
+  }
+}
+*/
+
+.restuarant-booking .booking-img{
+  background: url(../img/34.webp);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 600px;
+}
+.restuarant-booking .row{
+  position: relative;
+}
+.restuarant-booking .booking-form{
+  position: absolute;
+  right: 120px;
+  top: 70px;
+  background: var(--white);
+}
+.restuarant-booking label{
+  font-weight: 600;
+  color: var(--dark-black);
+}
+.restuarant-booking .form-control{
+  height: 52px !important;
+  background: #fff !important;
+  color: #000000 !important;
+  font-size: 16px;
+  border-radius: 0px;
+  -webkit-box-shadow: none !important;
+  box-shadow: none !important;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+.restuarant-booking .select-wrap{
+  position: relative;
+}
+.restuarant-booking .icon{
+  position: absolute;
+  top: -80% !important;
+  right: 20px;
+  font-size: 14px;
+  transform: translateY(-50%);
+  color: rgba(0, 0, 0, 0.7);
+}
+@media screen and (max-width: 900px){
+  .restuarant-booking .booking-form{
+    position: static;
+    width: 100%;
+  }
+  .restuarant-booking .booking-img{
+   display: none;
+  }
+} 
+
+/*==== restaurant page ends ====*/
+
+/*==== service and course page start ====*/
+.service-pg,
+.courses-pg,
+.contact-pg{
+  margin-top: 20rem;
+}
+
+@media screen and (max-width: 750px){
+  .service-pg,
+  .courses-pg,
+  .contact-pg{
+    margin-top: 15rem;
+  }
+}
+@media screen and (max-width: 450px){
+  .service-pg,
+  .courses-pg,
+  .contact-pg{
+    margin-top: 12rem;
+  }
+}
+/*==== service and course page end ====*/
+
+
+/* ==== contact page start ==== */
+
+.contact-pg label{
+  font-weight: 600;
+  color: var(--dark-black);
+}
+.contact-pg .form-control{
+  height: 52px;
+  background: #fff !important;
+  color: #000000 !important;
+  font-size: 16px;
+  border-radius: 0px;
+  -webkit-box-shadow: none !important;
+  box-shadow: none !important;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+.contact-pg textarea.form-control{
+  height: 100px!important;
+}
+.contact-pg .select-wrap{
+  position: relative;
+}
+.contact-pg .icon{
+  position: absolute;
+  top: -80% !important;
+  right: 20px;
+  font-size: 14px;
+  transform: translateY(-50%);
+  color: rgba(0, 0, 0, 0.7);
+}
+.contact-pg .map{
+  margin: auto;
+}
+.contact-pg .map iframe{
+  width: 100%;
+  border: none;
+}
+.contact-pg .la{
+    font-size: 20px;
+    margin-bottom: 25px;
+    background-color: var(--main-red);
+    color: var(--white);
+    width: 2.275rem;
+    height: 2.275rem;
+    border-radius: 50%;
+    line-height: 40px;
+    text-align: center;
+    display: inline-block;
+}
+.contact-pg .laa{
+  color:  var(--main-red);
+  font-size: 20px;
+  transition: 0.3s ease;
+}
+.contact-pg .card-text span{
+  font-size: 25px;
+}
+@media screen and (max-width: 767px){
+  .contact-pg .contact-info{
+    margin-top: 3rem;
+  }
+}
+/* ==== contact page end ==== */
+
+
+/* ==== each service page start ==== */
+
+/* Stem vacation programme start */
+.prog-includes-pg h1::after{
+  display: none;
+}
+/* .programme-details{
+  background-color: #fafbfc;
+} */
+.programme-details .card{
+  width: 100%;
+  border: none;
+}
+.programme-details .card img{
+  padding: 0!important;
+  object-fit: cover;
+  height: 90%;
+  width: 100%;
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
+}
+.programme-details .card-body::after{
+  content: '';
+  width: 95%;
+  height: 1px;
+  background: #dbe2e8;
+  display: block;
+  margin: auto;
+}
+.syllabus{
+  margin-bottom: .75rem;
+  text-indent: 3.75rem;
+  margin-top: 0;
+  margin-bottom: .375rem;
+  position: absolute;
+  left: 0.95rem;
+  top: .75rem;
+  color: #fff;
+  line-height: 1.75rem;
+  text-indent: 1.5rem;
+  padding-right: .75rem;
+  background-image: -webkit-gradient(linear,left top,right top,from(var(--main-red)),to(var(--main-red)));
+}
+.syllabus::after{
+  position: absolute;
+  content: "";
+  top: 0;
+  width: 0;
+  height: 0;
+  right: -1rem;
+  transform: rotate(1turn);
+  border-color: var(--main-red) transparent transparent;
+  border-style: solid;
+  border-width: 1.75rem 1rem 0 0;
+}
+@media(max-width: 750px){
+  .prog-includes-pg > .container > h1{
+    margin-top: 0!important;
+  }
+}
+
+@media(max-width: 767px){
+
+  .programme-details .row{
+      flex-direction: column-reverse;
+  }
+  .programme-details .card-title{
+    text-align: center;
+    padding-top: 1rem!important;
+  }
+  .programme-details .card img{
+    border-top-right-radius: 0px;
+    border-top-left-radius: 0px;
+  }
+  .programme-details .syllabus{
+    display: none;
+  }
+  .programme-details .card{
+    padding-top: 0!important
+  }
+  .programme-details .card-body{
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  .programme-details > div,
+  .programme-details .container{
+    margin-top: 0.5rem!important;
+    padding-top: 0.5rem!important;
+  }
+
+
+
+}
+@media(max-width: 500px){
+
+  .programme-details .card-body{
+    padding-left: 0.9rem!important;
+    padding-right: 0.9rem!important;
+  }
+
+}
+/* Stem vacation programme end */
+
+/* Courses start */
+.courses .choose__item h5{
+  margin-top: 0;
+}
+.courses .choose__item p{
+  text-align: center!important;
+}
+/* Courses end */
+
+/*accordion starts*/
+.accordion{
+  max-width: 90%;
+  margin: auto;
+}
+.accordion .content-box{
+  position: relative;
+  margin: 0 20px; 
+}
+.accordion .content-box .label{
+  position: relative;
+  padding: 10px;
+  color: #88c417;
+  cursor: pointer;
+}
+.accordion .content-box .label::after{
+  content: '+';
+  position: absolute;
+  top: 50%;
+  left: 20%;
+  transform: translateY(-50%);
+  font-size: 1.5em;
+}
+.accordion .content-box.active .label::after{
+  content: '-';
+
+}
+.accordion .content-box .content{
+  position: relative;
+  background: #fff;
+  height: 0;
+  overflow: hidden;
+  transition: 0.3s;
+  overflow-y: auto;
+}
+.accordion .content-box.active .content{
+  height: auto;
+  padding: 10px;
+}
+.accordion a{
+  color: #88c417;
+}
+.accordion a:hover{
+  text-decoration: underline;
+}
+.syllabus-list{
+  border-left: 1px solid #dbe2e8;
+  padding-left: 1.5rem;
+  min-height: auto;
+  padding-bottom: 1.75rem;
+  position: relative;
+}
+.syllabus-list::after{
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: .5rem;
+  height: .5rem;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  background-color: #88c417;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+.hero-btn2{
+  text-decoration: none;
+  padding: 12px 34px;
+  font-size: 16px;
+  border: 1px solid #88c417;
+  background: #88c417;
+  color: #fff;
+  transition: 1s;
+}
+.hero-btn2:hover{
+  cursor: pointer;
+  background:#182143;
+  border: 1px solid #182143;
+}
+@media(max-width: 770px){
+  .accordion .content-box .label::after{
+      left: 60%;
+  }
+  .course-details .card-body{
+      margin-bottom: 0px!important;
+  }
+
+}
+@media(max-width: 670px){
+  .accordion .content-box .label::after{
+      left: 20%!important;
+  }
+
+}
+@media(max-width: 685px){
+  .accordion .content-box .label::after{
+      left: 50%!important;
+  }
+
+}
+/*accordion ends*/
+/* ==== each service page end ==== */
+
+
+/*======================= menu page start =======================*/
+@media(max-width: 750px){
+  .restuarant-pg{
+    margin-top: 0rem!important;
+    padding-top: 1rem!important;
+  }
+
+
+}
+/*======================= menu page end =======================*/
+

@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>RIC ADOLF MEDICAL SUPPLIES</title>
+
+    <!-- fav icon -->
+    <link rel="icon" href="img/logo.png" type="image/x-icon" />
+
+    <!-- css files -->
+    <link href="css/mdb.min.css" rel="stylesheet"  type="text/css"/><!-- MDB -->
+    <link href="css/ricadolf.css" rel='stylesheet' type='text/css'/><!-- custom css -->
+    <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/font-awesome-line-awesome/css/all.min.css"><!--line awesome css -->
+
+</head>
+<body>
+    <!-- Start your project here -->
+
+    <main>
+        <!-- Scroll to the top icon start -->
+        <a href="#" class="scrolltop" id="scroll-top">
+            <i class="fas fa-arrow-up scrolltop__icon"></i>
+        </a>
+        <!-- Scroll to the top icon send -->
+        
+
+        <!-- header start -->
+        <header>
+
+            <!-- Navbar start -->
+            <nav>
+                <!-- <a class="logo" href="#!"><img src="img/logo.png" alt="logo"></a> -->
+                <div class="nav-links" id="navLinks">
+                    <i class="fas fa-times" onclick="hideMenu()"></i>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Services</a></li>
+                        <li><a href="#">Projects</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul> 
+                </div> 
+                <i class="fab fa-buromobelexperte" onclick="showMenu()"></i>
+            </nav>
+            <!-- Navbar end -->
+
+            <!-- Banner start -->
+            <div class="banner">
+                <div class="video-overlay"></div>
+                <video autoplay muted loop>
+                    <source src="video/bannervideo.mp4" type="video/mp4">
+                </video>
+                <div class="content">
+                    <h1>Fullscreen Video Banner</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus praesentium perferendis nihil accusamus dolorum excepturi, ipsam, sit ullam nostrum, quibusdam quis. Dolorem dolor fugit facilis consectetur quae quasi provident quo?</p>
+                </div>
+            </div>
+            <!-- Banner end -->
+            
+            
+        </header>
+        <!-- header end -->
+            
+       
+
+        <!-- about start -->
+        <section class="about">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="px-5 mt-3 pt-3 p-4 d-flex justify-content-center align-items-center col-lg-6 col-md-6 col-sm-6 col-xs-12 mb-3">
+                        <div>
+                            <h1>HOW IT WORKS</h1>
+                            <h5>We stand out in a crowded market for our innovations and values-driven approach.</h5>
+                            <p>"Quality is never accidental. It is always the result of smart hard work." - Anthony Oliver Taucher.</p>
+                            <div class="centered-btn">
+                                <button class="my-btn text-center"><a href="about.html">Read More<i
+                                    class="fas fa-arrow-right button__icon"></i></a>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="about-img col-lg-6 col-md-6 col-sm-6 col-xs-12">  
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- about end -->
+
+        <!-- Equipment start-->
+        <section class="equipment pb-5">
+            <div class="container">
+                <h1 class="py-5 text-center">Equipments</h1>
+                <div class="row">
+                    <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                        <div class="card ">
+                            <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
+                                <img src="img/1.webp" class="img-fluid" />
+                            </div>
+        
+                            <div class="card-body">
+                                <h4 class="card-title"></h4>
+                                <!-- <p class="card-title">&nbsp; &#8358;40,000</p> -->
+                            </div>
+                        </div>
+                    </div>
+        
+                    <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                        <div class="card ">
+                            <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
+                                <img src="img/3.webp" class="img-fluid" />
+                            </div>
+        
+                            <div class="card-body">
+                                <h4 class="card-title"></h4>
+                                <!-- <p class="card-title">&nbsp; &#8358;40,000</p> -->
+        
+                            </div>
+                        </div>
+                    </div>
+        
+                    <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                        <div class="card ">
+                            <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
+                                <img src="img/4.webp" class="img-fluid" />
+                            </div>
+        
+                            <div class="card-body">
+                                <h4 class="card-title"></h4>
+                                <!-- <p class="card-title">&nbsp; &#8358;40,000</p> -->
+        
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="text-center mt-5">
+                    <button class="my-btn text-center"><a href="menu.html">View More<i
+                        class="fas fa-arrow-right button__icon"></i></a></button>
+                </div>
+            </div>
+        </section>
+        <!-- Equipment end -->
+
+        <!-- testimonial start -->
+        <section class="testimonials pt-5 pb-5">
+            <div class="container test_con">
+                <h1 class="text-center py-3">Our Happy Customers</h1>
+                <div class="row testi-slider carousel slide" id="carouselExampleIndicators" data-mdb-ride="carousel">
+                    <div class="carousel-indicators">
+                        <button type="button" data-mdb-target="#carouselExampleIndicators" data-mdb-slide-to="0" class="active"
+                            aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-mdb-target="#carouselExampleIndicators" data-mdb-slide-to="1"
+                            aria-label="Slide 2"></button>
+                        <button type="button" data-mdb-target="#carouselExampleIndicators" data-mdb-slide-to="2"
+                            aria-label="Slide 3"></button>
+                        <button type="button" data-mdb-target="#carouselExampleIndicators" data-mdb-slide-to="3"
+                            aria-label="Slide 4"></button>
+                        <button type="button" data-mdb-target="#carouselExampleIndicators" data-mdb-slide-to="4"
+                            aria-label="Slide 5"></button>
+                    </div>
+                    <div class="carousel-inner">
+                        <div class="col-10 text-center carousel-item active">
+                            <p class="my-3">
+                                <q>
+                                    I'm happy to be part of the EHC. My boot camp training was amazing. Prior to now, I had no
+                                    interest in Tech. I always felt it wasn't for me and I didn't fit in.
+                                    Now, I'm more confident being around people in tech and I believe I'm in for this for the
+                                    long run.
+                                </q>
+                            </p>
+                            <h2 class="py-5">Eghe Omorogbe</h2>
+                        </div>
+                        <div class="col-10 text-center carousel-item">
+                            <p class="my-3">
+                                <q> The experience with Empower Her Boot Camp has been a wonderful one. I got to be taught
+                                    valuable skills and make friends. It feels good to be part of a community of tech savvy
+                                    females raising each other up and learning from one another </q>
+                            </p>
+                            <h2 class="py-5">Favour Aguebor</h2>
+                        </div>
+                        <div class="col-10 text-center carousel-item">
+                            <p class="my-3">
+                                <q> Empower Her Community is superbly awesome! Participating in the one month bootcamp has taken
+                                    me a step further from where I was. Aside the skill acquired as a graphics designer,
+                                    she has taught me relevance to the society as a lady. Long live Empower Her Community! </q>
+                            </p>
+                            <h2 class="py-5"> Osazuwa Ivie</h2>
+        
+                        </div>
+                        <div class="col-10 text-center carousel-item">
+                            <p class="my-3">
+                                <q> Serene environment. Great facilitators.
+                                    The Empower Her boot camp exceeded my expectations. This for me was a journey to self
+                                    discovery. I've learned a lot and gained tools to help me in not just the tech world but in
+                                    life. This was a great opportunity and I'm grateful for it.
+                                </q>
+                            </p>
+                            <h2 class="py-5">Eseoghene Owhuvwie</h2>
+                        </div>
+                        <div class="col-10 text-center carousel-item">
+                            <img src="img/test3.jpg">
+                            <p class="my-3">
+                                <q> I want to say a very big thank you to the Empower Her Community for creating an opportunity
+                                    for females to have access to the IT world. The Boot camp was a very awesome experience for
+                                    me and i totally enjoyed each and every aspect of it. </q>
+                            </p>
+                            <h2 class="py-5">Okoruwa Favour</h2>
+                        </div>
+                    </div>
+                </div>
+        
+            </div>
+            </div>
+        </section>
+        <!-- testimonial end -->
+
+    </main>
+
+    <!-- Footer start -->
+    <footer class="pt-5 pb-2">
+        <div class="container py-sm-3">
+            <div class="row footer-grids">
+                <div class="col-xl-5 col-lg-5 col-sm-6 col-xs-12 mb-5 footer_1">
+                    <div class="inner">
+                        <h4 class="mb-sm-4">
+                            <a href="#!"><img src="img/logo.png" alt="logo" class="logo"></a>
+                            Caviar Culinary Arts
+                        </h4>
+                        <p class="mb-3">
+                            A unique school aimed at developing culinary professionals who can convey emotions through good food, and ultimately tapping from the vast career opportunities in the food industry.
+                        </p>
+                        <div class="social-links">
+                            <!-- <a href="https://twitter.com/empowerhercom?s=08" target="_blank" class="pe-4"><i class="fab fa-twitter"></i></a> -->
+                            <a href="https://instagram.com/caviarculinaryarts" target="_blank" class="pe-4"><i class="fab fa-instagram"></i></a>
+                            <!-- <a href="https://www.facebook.com/empowerhercom/" target="_blank" class="pe-4"><i class="fab fa-facebook-f"></i></a>
+                            <a href="https://docs.google.com/forms/d/e/1FAIpQLSdiqxcF-QKi9bf97M6XaNUEmr1dc-5wOLpeAJqNWaCtRjTb5A/viewform" target="_blank" class="pe-4"><i class="fab fa-slack"></i></a> -->
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-lg-4 col-sm-6 col-xs-12 mb-4 footer_3">
+                    <div class="inner">
+                        <h4 class="mb-sm-4">Address Info</h4>
+                        <p><i class="fa fa-phone-alt"></i>&nbsp;&nbsp;+234 7063784169</p>
+                        <p><i class="fa fa-map-marker-alt"></i> 1, Jidaire Drive Off Etete Road, GRA, Benin City, Nigeria.</p>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-lg-3 col-sm-6 col-xs-12 mb-4 footer_2">
+                    <div class="inner">
+                        <h4 class="mb-sm-4">Quick Links</h4>
+                        <ul class="footer-links">
+                            <li>
+                                <a href="index.html">Home</a>
+                            </li>
+                            <li class="my-2">
+                                <a href="about.html">About</a>
+                            </li>
+                            <li class="dropdown my-2">
+                                <a
+                                class="dropdown-toggle"
+                                href="#"
+                                role="button"
+                                id="dropdownMenuLink"
+                                data-mdb-toggle="dropdown"
+                                aria-expanded="false"
+                                >
+                                Services
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                                    <li><a class="dropdown-item" href="service1.html">Culinary training</a></li>
+                                    <li><a class="dropdown-item" href="service2.html">Outdoor catering</a></li>
+                                    <li><a class="dropdown-item" href="service3.html">Food delivery</a></li>
+                                    <li><a class="dropdown-item" href="service4.html">Healthy meal planning</a></li>
+                                    <li><a class="dropdown-item" href="service5.html">Food business consultation</a></li>
+                                </ul>
+                              </li>
+                            <li class="dropdown my-2">
+                                <a
+                                class="dropdown-toggle"
+                                href="#"
+                                role="button"
+                                id="dropdownMenuLink"
+                                data-mdb-toggle="dropdown"
+                                aria-expanded="false"
+                                >
+                                Courses
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                                    <li><a class="dropdown-item" href="course1.html">Professional Culinary Arts</a></li>
+                                    <li><a class="dropdown-item" href="course2.html">Professional Cookery</a></li>
+                                    <li><a class="dropdown-item" href="course3.html">Professional Pastry</a></li>
+                                </ul>
+                            </li>
+                            <li class="my-2">
+                                <a href="menu.html">Menu</a>
+                            </li>
+                            <li class="my-2">
+                                <a href="contact.html">Contact</a>
+                            </li>
+                           
+                        </ul>
+                    </div>
+                </div>
+                
+            </div>
+            <div class="footer-bottom text-center">
+                <p>All Rights Reserved.  Empowerhercom
+                    <span class="current-date-year"></span>
+                </p>
+            </div>
+        </div>
+    </footer>
+    <!-- Footer end -->
+
+    <!--/. End your project here -->
+    
+    <!-- scroll reveal -->
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <!-- MDB -->
+    <script type="text/javascript" src="js/mdb.min.js"></script>
+    <!-- Custom script -->
+    <script type="text/javascript" src="js/ricadolf.js"></script>
+</body>
+</html>
