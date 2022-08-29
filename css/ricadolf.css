@@ -11,8 +11,8 @@
   --main-blue: #003049;
   --dark-black: #000;
   --light-black: #1a1a1a;
-  --light-red: rgba(252, 233, 234, 0.7);
-  --lighter-red: rgba(252, 233, 234, 0.3);
+  --light-red: rgba(0, 179, 134, 0.1);
+  --lighter-red: rgba(0, 179, 134, 0.1);
   --navbar-scroll: #cbbcb1;
   
   --backdrop-filter-blur: blur(25px);
@@ -73,7 +73,7 @@ p{
     justify-content: center;
     align-items: center;
     padding: .3rem;
-    background: #ff9c07;
+    background: var(--main-red);
     border-radius: .4rem;
     z-index: 10;
     transition: .4s;
@@ -111,7 +111,7 @@ nav{
   z-index: 100;
 }
 nav .logo img{
-  width: 4rem!important;
+  width: 5.5rem!important;
 }
 nav .logo{
   z-index: 5!important;
@@ -203,7 +203,7 @@ nav .fab{
     font-size: 22px;
     cursor: pointer;
   }
-  nav .fa-buromobelexperte{
+  nav .fa-bars{
     z-index: 5;
     font-size: 26px!important;
     color: var(--main-red);
@@ -281,14 +281,14 @@ nav .fab{
 /*======================= About start =======================*/
 
 .about h1,
-
-.courses h1,
+.service h1,
+.equipments h1,
 .restuarant h1,
 .about_banner h1,
 .restuarant-pg h1,
 .restuarant-booking h1,
 .prog-includes h1,
-.contact-pg h2
+.meet-the-team h1
 {
   color: var(--dark-black);
   font-family: var(--font-family);
@@ -297,27 +297,6 @@ nav .fab{
 .about_banner h1{
   color: var(--white);
 }
-
-/* .about h1::after,
-.service h1::after,
-.courses h1::after,
-.restuarant h1::after,
-.about_banner h1::after,
-.restuarant-pg h1::after,
-.restuarant-booking h1::after,
-.prog-includes h1::after{
-  content: '';
-  background: var(--main-red);
-  height: 4px;
-  width: 85px;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 5px;
-  display: block;
-  transform: translateY(6px);
-  border-radius: 20px; 
-
-} */
 
 
 
@@ -334,7 +313,14 @@ nav .fab{
   border: none;
   border-radius: 50px;
   background-color: var(--main-red);
+  transition: 0.5s;
 
+}
+.my-btn:hover a{
+  color: #fff;
+}
+.my-btn:hover {
+  background-color: #000;
 }
 i.dir-arrow{
   padding-left: 0.3rem;
@@ -352,6 +338,18 @@ i.dir-arrow{
   background-repeat: no-repeat;
   background-size: cover; 
 }  
+.service-img2{
+  background-image: url("../img/13.webp");
+}
+.service-img3{
+  background-image: url("../img/17.jpeg");
+}
+.service-img4{
+  background-image: url("../img/16.jpeg");
+}
+.service-img5{
+  background-image: url("../img/20.jpeg");
+}
 
 @media screen and (max-width: 1000px){
   .about .row > div{
@@ -375,42 +373,83 @@ i.dir-arrow{
 
 
 /*======================= Equipment start =======================*/
-.equipment{
-  background: var(--dark-black);
+
+.slider-container div img{
+  width: 90%;
+  border-radius: 20px;
 }
-.equipment h1{
-  color: #fff;
+@media(max-width: 992px){
+  .slider-container li{
+    width: 100%!important;
+  }
+  .slider-container div img{
+    width: 100%!important;
 }
+}
+@media(max-width: 1000px){
+  .equipments h1{
+    margin-top: 0rem!important;
+}
+}
+
 /*======================= Equipment end =======================*/
 
+/*======================= Service start =======================*/
+.service .card{
+  text-align: center;
+  border: none;
+  outline: none;
+  background: var(--lighter-red);
+  border-radius: 20px;
+  /* box-shadow: none; */
+}
+.service .card p{
+  color: var(--dark-black);
+  font-size: 18px;
+}
+.circle{
+  height: 70px;
+  width: 70px;
+  background: var(--light-red);
+  color: var(--dark-black);
+  padding: 12px;
+  display: inline-block;
+  margin-bottom: 20px;
+  font-size: 30px;
+  border-radius: 50%;
+}
+.circle{
+  position: relative;
+  top: -30%;
+}
+.service .card:hover .circle{
+  background: var(--light-black);
+  color: var(--white);
+  transition: 0.5s;
+  cursor: pointer;
+}
 
-/*======================= testimonial start =======================*/
+.service .circle i{
+  font-size: 50px;
+  color: var(--main-red)
 
-.testimonials{
-    background: linear-gradient(rgba(0, 0, 0, 0.9),rgba(0, 0, 0, 0.9)), url(../img/1.jpg);
-    background-size: cover;
-    background-attachment: fixed;
-    background-repeat: no-repeat;
 }
-.testimonials h1{
-    color: white;
+.service .card:hover i{
+  color: var(--white);
 }
-.testi-slider > div{
-    margin: auto;
+@media screen and (max-width: 575px){
+  .service .row{
+    margin-left: 4rem;
+    margin-right: 4rem;
+  }
 }
-.testi-slider img{
-    width: 100px;
-    border-radius: 50%;
+@media screen and (max-width: 390px){
+  .service .row{
+    margin-left: 0rem;
+    margin-right: 0rem;
+  }
 }
-.testi-slider .text-center{
-    color: white;
-}
-.testi-slider p{
-    font-size: 20px;
-}
-
-/*======================= testimonial end =======================*/
-
+/*======================= Service end =======================*/
 
 /*======================= footer section starts =======================*/
 footer{
@@ -423,7 +462,7 @@ footer{
 
 }
 footer .logo{
-  width: 4rem!important;
+  width: 5rem!important;
 }
 
 footer p{
@@ -513,13 +552,20 @@ ol, ul{
 
 /*=======================  footer section ends =======================*/
 
-/*==== home page ends ====*/
 
+/*============================  home page ends ==============================*/
 
-/*==== about page start ====*/
+/*============================  about page start ==============================*/
 .about_banner{
-  background: linear-gradient(rgba(0, 0, 0, 0.7),rgba(0, 0, 0, 0.7)), url(../img/banner2.jpg);
+  background: linear-gradient(rgba(0, 0, 0, .5),rgba(0, 0, 0, .5)), url(../img/1.jpg);
   background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center top;
+  height: 40vh;
+}
+.contact_banner{
+  background: linear-gradient(rgba(0, 0, 0, .5),rgba(0, 0, 0, .5)), url(../img/contact.webp);
+   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
   height: 40vh;
@@ -528,183 +574,106 @@ ol, ul{
   height: 0;
 }
 
-@media screen and (max-width: 991px){
-  .about .row{
-    display: flex;
-    flex-direction: column-reverse;
+/* ===== meet the team start=====*/
+.meet-the-team h1{
+    text-align: center;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+ol{
+    counter-reset: li; 
+    list-style: none; 
+    padding: 0;
   }
-  .n_about .about-text{
-  padding-top: 0px!important;
-}
-
-}
-@media screen and (max-width: 750px){
-  .about_banner{
-    height: 30vh;
+  
+  ol span {
+    position: relative;
+    display: block;
+    padding: .4em .4em .4em .8em;
+    margin: .5em 0 .5em 2.5em;
+    
+    color: #000;
+    text-decoration: none;
+    transition: all .3s ease-out;
   }
-  .about_banner div{
-    padding-top: 0rem!important;
+  
+  ol span:hover {
+    background: linear-gradient(
+        180deg
+        , #f2f6fa 0%, #fff 100%);
+      color: #000;
+    } 
+          
+  ol span:before {
+    content: counter(li);
+    counter-increment: li;
+    position: absolute;
+    left: -2.5em;
+    top: 50%;
+    margin-top: -1em;
+    background:  var(--main-red);
+    color: white;
+    height: 2em;
+    width: 2em;
+    line-height: 2em;
+    text-align: center;
+    font-weight: bold;
   }
-}
-@media screen and (max-width: 450px){
-  .about_banner{
-    height: 25vh;
+  
+  ol span:after {
+    position: absolute;
+    content: "";
+    border: .5em solid transparent;
+    left: -1em;
+    top: 50%;
+    margin-top: -.5em;
+    transition: all .3s ease-out;
   }
-  .about_banner h1{
-    padding-top: 1.5rem!important;
+  
+  ol span:hover:after {
+    left: -.5em;
+    border-left-color:  var(--main-red);
+    
   }
-}
-/*==== about page ends ====*/
-
-
-/*==== restaurant page starts ====*/
-.restuarant-pg .card{
-  border-radius: 20px!important;
-}
-.restuarant-pg .card-body .card-title{
-  color: var(--dark-black);
-  font-family: var(--font-family);
-  font-weight: 400;
-}
-.restuarant-pg img{
-  object-fit: cover;
-  height: 95%;
-  width: 100%;
-  border-top-left-radius: 20px!important;
-  border-top-right-radius: 20px!important;
-}
-@media screen and (max-width: 991px){
- .restuarant-pg .card-body{
-   text-align: center;
+  .meet-the-team > div{
+      padding-left: 100px!important;
+      padding-bottom: 40px;
+  }
+  .meet-the-team .row div{
+      margin-bottom: 0em!important;
+  }
+  @media (max-width: 1000px){
+    .meet-the-team > div{
+        padding-left: 50px!important;
+    }
+    ol span{
+      text-align: left;
+    }
  }
-}
-@media screen and (max-width: 575px){
-  .about_banner{
-    height: 25vh;
-  }
-  .about_banner h1{
-    padding-top: 1.5rem!important;
-  }
-  .restuarant-pg .row{
-    margin-left: 1rem;
-    margin-right: 1rem;
+ @media (max-width: 800px){
+    .meet-the-team > div{
+        padding-left: 20px!important;
+    }
+ }
+ @media (max-width: 750px){
+    .meet-the-team > div{
+        padding-left: 0px!important;
+    }
+ }
+  @media (max-width: 767px){
+    .meet-the-team .container{
+        padding-left: 0;
+    }
+ }
+ @media (max-width: 450px){
+    .meet-the-team ol span {
+        font-size: 13px!important;
+    }
+ }
+ 
+/* ===== meet the team end=====*/
 
-  }
-  .restuarant-pg .row .card{
-    margin-bottom: 2rem;
-  }
-}
-
-/* .restuarant-pg .row{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.restuarant-pg .row > div{
-  background: linear-gradient(rgba(0, 0, 0, 0.7),rgba(0, 0, 0, 0.7)), url(../img/31.webp);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  height: 420px;
-  width: 350px;
-  border-radius: 20px;
-  border-top-right-radius: 0px;
-}
-
-.restuarant-pg .row > div h2{
-  font-size: 35px;
-  color: var(--white);
-}
-@media screen and (max-width: 767px){
-  .restuarant-pg .row > div{
-    margin-left: 0rem!important;
-  }
-}
-
-@media screen and (max-width: 750px){
-  .restuarant-pg{
-    padding-top: 0rem!important;
-    margin-top: 0rem!important;
-  }
-}
-*/
-
-.restuarant-booking .booking-img{
-  background: url(../img/34.webp);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  height: 600px;
-}
-.restuarant-booking .row{
-  position: relative;
-}
-.restuarant-booking .booking-form{
-  position: absolute;
-  right: 120px;
-  top: 70px;
-  background: var(--white);
-}
-.restuarant-booking label{
-  font-weight: 600;
-  color: var(--dark-black);
-}
-.restuarant-booking .form-control{
-  height: 52px !important;
-  background: #fff !important;
-  color: #000000 !important;
-  font-size: 16px;
-  border-radius: 0px;
-  -webkit-box-shadow: none !important;
-  box-shadow: none !important;
-  border: 1px solid rgba(0, 0, 0, 0.1);
-}
-.restuarant-booking .select-wrap{
-  position: relative;
-}
-.restuarant-booking .icon{
-  position: absolute;
-  top: -80% !important;
-  right: 20px;
-  font-size: 14px;
-  transform: translateY(-50%);
-  color: rgba(0, 0, 0, 0.7);
-}
-@media screen and (max-width: 900px){
-  .restuarant-booking .booking-form{
-    position: static;
-    width: 100%;
-  }
-  .restuarant-booking .booking-img{
-   display: none;
-  }
-} 
-
-/*==== restaurant page ends ====*/
-
-/*==== service and course page start ====*/
-.service-pg,
-.courses-pg,
-.contact-pg{
-  margin-top: 20rem;
-}
-
-@media screen and (max-width: 750px){
-  .service-pg,
-  .courses-pg,
-  .contact-pg{
-    margin-top: 15rem;
-  }
-}
-@media screen and (max-width: 450px){
-  .service-pg,
-  .courses-pg,
-  .contact-pg{
-    margin-top: 12rem;
-  }
-}
-/*==== service and course page end ====*/
-
+/*============================  about page end ==============================*/
 
 /* ==== contact page start ==== */
 
@@ -712,6 +681,11 @@ ol, ul{
   font-weight: 600;
   color: var(--dark-black);
 }
+.booking-form,
+.contact-pg .card{
+  border-radius: 20px;
+}
+
 .contact-pg .form-control{
   height: 52px;
   background: #fff !important;
@@ -771,230 +745,5 @@ ol, ul{
 /* ==== contact page end ==== */
 
 
-/* ==== each service page start ==== */
 
-/* Stem vacation programme start */
-.prog-includes-pg h1::after{
-  display: none;
-}
-/* .programme-details{
-  background-color: #fafbfc;
-} */
-.programme-details .card{
-  width: 100%;
-  border: none;
-}
-.programme-details .card img{
-  padding: 0!important;
-  object-fit: cover;
-  height: 90%;
-  width: 100%;
-  border-top-right-radius: 5px;
-  border-top-left-radius: 5px;
-}
-.programme-details .card-body::after{
-  content: '';
-  width: 95%;
-  height: 1px;
-  background: #dbe2e8;
-  display: block;
-  margin: auto;
-}
-.syllabus{
-  margin-bottom: .75rem;
-  text-indent: 3.75rem;
-  margin-top: 0;
-  margin-bottom: .375rem;
-  position: absolute;
-  left: 0.95rem;
-  top: .75rem;
-  color: #fff;
-  line-height: 1.75rem;
-  text-indent: 1.5rem;
-  padding-right: .75rem;
-  background-image: -webkit-gradient(linear,left top,right top,from(var(--main-red)),to(var(--main-red)));
-}
-.syllabus::after{
-  position: absolute;
-  content: "";
-  top: 0;
-  width: 0;
-  height: 0;
-  right: -1rem;
-  transform: rotate(1turn);
-  border-color: var(--main-red) transparent transparent;
-  border-style: solid;
-  border-width: 1.75rem 1rem 0 0;
-}
-@media(max-width: 750px){
-  .prog-includes-pg > .container > h1{
-    margin-top: 0!important;
-  }
-}
-
-@media(max-width: 767px){
-
-  .programme-details .row{
-      flex-direction: column-reverse;
-  }
-  .programme-details .card-title{
-    text-align: center;
-    padding-top: 1rem!important;
-  }
-  .programme-details .card img{
-    border-top-right-radius: 0px;
-    border-top-left-radius: 0px;
-  }
-  .programme-details .syllabus{
-    display: none;
-  }
-  .programme-details .card{
-    padding-top: 0!important
-  }
-  .programme-details .card-body{
-    padding-left: 1rem;
-    padding-right: 1rem;
-  }
-  .programme-details > div,
-  .programme-details .container{
-    margin-top: 0.5rem!important;
-    padding-top: 0.5rem!important;
-  }
-
-
-
-}
-@media(max-width: 500px){
-
-  .programme-details .card-body{
-    padding-left: 0.9rem!important;
-    padding-right: 0.9rem!important;
-  }
-
-}
-/* Stem vacation programme end */
-
-/* Courses start */
-.courses .choose__item h5{
-  margin-top: 0;
-}
-.courses .choose__item p{
-  text-align: center!important;
-}
-/* Courses end */
-
-/*accordion starts*/
-.accordion{
-  max-width: 90%;
-  margin: auto;
-}
-.accordion .content-box{
-  position: relative;
-  margin: 0 20px; 
-}
-.accordion .content-box .label{
-  position: relative;
-  padding: 10px;
-  color: #88c417;
-  cursor: pointer;
-}
-.accordion .content-box .label::after{
-  content: '+';
-  position: absolute;
-  top: 50%;
-  left: 20%;
-  transform: translateY(-50%);
-  font-size: 1.5em;
-}
-.accordion .content-box.active .label::after{
-  content: '-';
-
-}
-.accordion .content-box .content{
-  position: relative;
-  background: #fff;
-  height: 0;
-  overflow: hidden;
-  transition: 0.3s;
-  overflow-y: auto;
-}
-.accordion .content-box.active .content{
-  height: auto;
-  padding: 10px;
-}
-.accordion a{
-  color: #88c417;
-}
-.accordion a:hover{
-  text-decoration: underline;
-}
-.syllabus-list{
-  border-left: 1px solid #dbe2e8;
-  padding-left: 1.5rem;
-  min-height: auto;
-  padding-bottom: 1.75rem;
-  position: relative;
-}
-.syllabus-list::after{
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: .5rem;
-  height: .5rem;
-  -moz-border-radius: 50%;
-  border-radius: 50%;
-  background-color: #88c417;
-  -webkit-transform: translateX(-50%);
-  transform: translateX(-50%);
-}
-.hero-btn2{
-  text-decoration: none;
-  padding: 12px 34px;
-  font-size: 16px;
-  border: 1px solid #88c417;
-  background: #88c417;
-  color: #fff;
-  transition: 1s;
-}
-.hero-btn2:hover{
-  cursor: pointer;
-  background:#182143;
-  border: 1px solid #182143;
-}
-@media(max-width: 770px){
-  .accordion .content-box .label::after{
-      left: 60%;
-  }
-  .course-details .card-body{
-      margin-bottom: 0px!important;
-  }
-
-}
-@media(max-width: 670px){
-  .accordion .content-box .label::after{
-      left: 20%!important;
-  }
-
-}
-@media(max-width: 685px){
-  .accordion .content-box .label::after{
-      left: 50%!important;
-  }
-
-}
-/*accordion ends*/
-/* ==== each service page end ==== */
-
-
-/*======================= menu page start =======================*/
-@media(max-width: 750px){
-  .restuarant-pg{
-    margin-top: 0rem!important;
-    padding-top: 1rem!important;
-  }
-
-
-}
-/*======================= menu page end =======================*/
 
